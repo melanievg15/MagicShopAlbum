@@ -1,0 +1,42 @@
+﻿@page
+@model MagicShopAlbum.Pages.Admin.Productos.ConsultModel
+@{
+}
+
+<h2 class="text-center mb-5">Consultar Album</h2>
+
+<style>
+    /* Estilos para el contenedor principal */
+    .custom-background {
+        background-color: #E6E0F8; /* Color de fondo */
+        padding: 20px; /* Espaciado interior */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-top: 20px; /* Espacio superior */
+    }
+</style>
+
+<div class="custom-background">
+
+    <form method="get">
+        <div class="form-group">
+            <label for="albumName">Nombre del Álbum:</label>
+            <input type="text" id="Nombre" name="Nombre" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+    @if (Model.Productos.Any())
+    {
+        <h3>Resultados de la búsqueda:</h3>
+        <ul>
+            @foreach (var album in Model.Productos)
+            {
+                <li>@album.nombre - @album.artista</li>
+            }
+        </ul>
+    }
+    else if (!string.IsNullOrEmpty(Model.Nombre))
+    {
+        <p>No se encontraron álbumes con el nombre "@Model.Nombre".</p>
+    }
+</div>

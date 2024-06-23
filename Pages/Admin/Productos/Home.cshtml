@@ -1,0 +1,106 @@
+﻿@page
+@model MagicShopAlbum.Pages.Admin.Productos.HomeModel
+@{
+}
+
+<style>
+    /* Estilos para la clase .small-video */
+    .small-video {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% del contenedor */
+        max-height: 200px; /* Ajusta la altura máxima de la imagen */
+        object-fit: cover; /* Hace que la imagen cubra el área del contenedor */
+    }
+</style>
+
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Lista de Álbumes</h1> <!-- Título principal centrado -->
+    </div>
+
+    <div class="container">
+        <!-- Contenedor principal de Bootstrap -->
+        <div class="row">
+            <!-- Fila de Bootstrap -->
+            <div class="col-md-10 mx-auto">
+                <!-- Columna de Bootstrap para centrar el contenido -->
+                <div class="card shadow">
+                    <!-- Tarjeta de Bootstrap con sombra -->
+                    <div class="card-body">
+                        <!-- Cuerpo de la tarjeta -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <!-- Contenedor flex para alinear elementos y separación inferior -->
+
+                            <a class="btn btn-success" href="/Admin/Productos/Add">Agregar</a> <!-- Botón de agregar con estilo de Bootstrap -->
+
+                            <video autoplay class="small-video">
+                                <source src="~/img/logo.mp4" type="video/mp4"> <!-- Etiqueta de video con fuente de video MP4 y clase small-video -->
+                            </video>
+
+                            <div class="d-flex flex-row align-items-center ml-auto">
+                                <!-- Contenedor flex para alinear elementos a la derecha -->
+
+                                <form method="get" class="form-inline">
+                                    <!-- Formulario en línea con método GET -->
+                                    <div class="form-group mb-2">
+                                        <label class="sr-only" for="searchInput">Buscar</label>
+                                        <input type="text" class="form-control" id="searchInput" name="searchQuery" placeholder="Buscar...">
+                                        <!-- Campo de entrada de texto para búsqueda -->
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label class="sr-only" for="searchType">Tipo de Búsqueda</label>
+                                        <select class="form-control" id="searchType" name="searchType">
+                                            <!-- Selector de tipo de búsqueda -->
+                                            <option value="nombre">Nombre</option>
+                                            <option value="artista">Artista</option>
+                                            <option value="precio">Precio</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                                    <!-- Botón de búsqueda con estilo de Bootstrap -->
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <!-- Tabla responsive de Bootstrap -->
+                            <table class="table table-bordered table-striped">
+                                <!-- Tabla con borde, rayas y encabezado oscuro -->
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Artista</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var producto in Model.Productos)
+                                    {
+                                        <!-- Iteración sobre cada producto en el modelo -->
+                                        <tr>
+                                            <td>@producto.id</td>
+                                            <td>@producto.nombre</td>
+                                            <td>@producto.artista</td>
+                                            <td>@(producto.precio)$</td>
+                                            <td>@producto.tipo</td>
+                                            <td>@producto.cantidad</td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm" href="/Admin/Productos/Update?id=@producto.id">Editar</a>
+                                                <!-- Enlace para editar con botón pequeño de Bootstrap -->
+                                                <a class="btn btn-danger btn-sm" href="/Admin/Productos/Drop?id=@producto.id">Eliminar</a>
+                                                <!-- Enlace para eliminar con botón pequeño de Bootstrap -->
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

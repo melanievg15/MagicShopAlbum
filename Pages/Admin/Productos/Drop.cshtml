@@ -1,0 +1,63 @@
+﻿@page
+@model MagicShopAlbum.Pages.Admin.Productos.DropModel
+@{
+}
+<style>
+    /* Estilos para el cuerpo de la página */
+    body {
+        background-image: url('/img/fondo.jpeg'); /* Establece la imagen de fondo */
+        background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+        margin: 0; /* Elimina el margen predeterminado del body */
+    }
+</style>
+
+<br>
+<br>
+<br>
+<br>
+
+<body>
+    <div class="container">
+        <!-- Contenedor principal de Bootstrap -->
+        <div class="row">
+            <!-- Fila de Bootstrap -->
+            <div class="col-md-8 mx-auto rounded border p-3 custom-background">
+                <div class="text-center">
+                    <h1 class="display-4" style="color:black">Borrar Álbum</h1> <!-- Título principal con clase de Bootstrap -->
+                </div>
+                <!-- Formulario para confirmar la eliminación -->
+                <form method="post" class="mt-4">
+                    <h4 class="alert-heading text-center">
+                        ¿Estás seguro de eliminar los registros del álbum <br> "@ViewData["AlbumName"]"?
+                    </h4> <!-- Encabezado de alerta centrado con el nombre del álbum dinámico -->
+
+                    <p class="text-center">
+                        Estás a punto de eliminar un registro y esta acción es irreversible.
+                    </p> <!-- Párrafo centrado con advertencia sobre la acción irreversible -->
+
+                    <input type="hidden" name="id" value="@ViewData["AlbumId"]" />
+                    <!-- Campo oculto para pasar el ID del álbum -->
+
+                    <div class="row mb-3 align-items-center">
+                        <!-- Fila de Bootstrap con margen inferior y alineación vertical -->
+
+                        <div class="offset-sm-4 col-sm-4 d-grid">
+                            <!-- Columna de Bootstrap con margen de desplazamiento y alineación de cuadrícula -->
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <!-- Botón para enviar el formulario con estilo de peligro (rojo) -->
+                        </div>
+
+                        <div class="col-sm-4 d-grid">
+                            <!-- Columna de Bootstrap con alineación de cuadrícula -->
+                            <a class="btn btn-outline-primary" href="/Admin/Productos/Home" role="button">Cancelar</a>
+                            <!-- Enlace estilizado como botón para cancelar la acción -->
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

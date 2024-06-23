@@ -1,0 +1,179 @@
+/* Estilos para el tamaño de fuente base en el documento HTML */
+html {
+    font-size: 14px; /* Tamaño de fuente base */
+}
+
+/* Estilos para el tamaño de fuente en dispositivos con al menos 768px de ancho */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Tamaño de fuente para dispositivos de pantalla más grandes */
+    }
+}
+
+/* Estilos para la sombra al enfocar elementos como botones y formularios */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb; /* Estilo de sombra al enfocar */
+}
+
+/* Estilos para el documento HTML y el cuerpo */
+html {
+    position: relative; /* Posición relativa */
+    min-height: 100%; /* Altura mínima del documento */
+}
+
+body {
+    margin-bottom: 60px; /* Margen inferior */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+    background-color: #faeaf3; /* Color de fondo */
+}
+
+/* Estilos para el contenedor principal con fondo rosa y bordes redondeados */
+.custom-background {
+    background-color: rgb(251, 228, 236); /* Fondo rosa */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los títulos */
+h2 {
+    color: black; /* Color negro */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 2rem; /* Tamaño grande */
+}
+
+h1 {
+    color: black; /* Color negro */
+    font-weight: bolder; /* Texto en negrita */
+    font-size: 2rem; /* Tamaño grande */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+}
+
+h5 {
+    color: black; /* Color negro */
+    font-weight: bold; /* Texto en negrita */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+}
+
+/* Estilos para los mensajes de alerta */
+.alert {
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para los botones */
+.btn-primary {
+    background-color: rgb(255, 127, 171); /* Rosa pastel */
+    color: #fff; /* Texto blanco */
+    border-color: #ff69b4; /* Borde rosa pastel */
+}
+
+    .btn-primary:hover {
+        background-color: #ff4f9e; /* Rosa pastel más oscuro al pasar el mouse */
+        border-color: #ff4f9e; /* Borde rosa pastel más oscuro */
+    }
+
+.btn-outline-primary {
+    color: #ff69b4; /* Texto rosa pastel */
+    border-color: #ff69b4; /* Borde rosa pastel */
+    font-weight: bold; /* Texto en negrita */
+}
+
+    .btn-outline-primary:hover {
+        background-color: #ff69b4; /* Fondo rosa pastel al pasar el mouse */
+        color: #fff; /* Texto blanco al pasar el mouse */
+    }
+
+/* Estilos para los campos de entrada y select */
+.form-control,
+.form-select {
+    border-color: #ced4da; /* Borde gris claro */
+}
+
+/* Estilos para los mensajes de validación */
+.text-danger {
+    color: #dc3545; /* Rojo oscuro para mensajes de error */
+}
+
+/* Estilos para la tabla */
+table, th, td {
+    border: 1px solid; /* Borde de la tabla */
+}
+
+.table {
+    background-color: #ffffff; /* Fondo blanco para las celdas */
+    border-collapse: collapse; /* Colapso de bordes */
+    width: 100%; /* Ancho completo */
+}
+
+    .table th,
+    .table td {
+        padding: 8px; /* Espaciado interno */
+        text-align: center; /* Alineación centrada del texto */
+        vertical-align: middle; /* Alineación vertical en el centro */
+    }
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #fcdedf; /* Rosa pastel claro para filas pares */
+}
+
+/* Estilos para los botones en las celdas de acción */
+.table .btn {
+    margin-right: 5px; /* Margen derecho */
+}
+
+.btn-editar {
+    background-color: #ff6f7d; /* Rosa pastel */
+    border-color: #ff6f7d; /* Mismo tono para el borde */
+}
+
+    .btn-editar:hover {
+        background-color: #e65b6b; /* Rosa pastel más oscuro al pasar el mouse */
+        border-color: #e65b6b; /* Borde rosa pastel más oscuro */
+    }
+
+.btn-eliminar {
+    background-color: #ff6f7d; /* Rosa pastel */
+    border-color: #ff6f7d; /* Mismo tono para el borde */
+}
+
+    .btn-eliminar:hover {
+        background-color: #e65b6b; /* Rosa pastel más oscuro al pasar el mouse */
+        border-color: #e65b6b; /* Borde rosa pastel más oscuro */
+    }
+
+.display-6 {
+    font-size: x-large; /* Tamaño de fuente extra grande */
+}
+
+.display-4 {
+    color: #ff1f64; /* Color rosa oscuro */
+}
+
+p {
+    text-align: justify; /* Alineación justificada para párrafos */
+}
+
+/* Estilos para la sección "gallery" */
+#gallary {
+    width: 100%; /* Ancho completo */
+}
+
+    #gallary h1 {
+        text-align: center; /* Alineación centrada del texto */
+        color: black; /* Color negro */
+        margin-top: 60px; /* Margen superior */
+        font-weight: bold; /* Texto en negrita */
+    }
+
+        #gallary h1 span {
+            color: #f74780; /* Color rosa pastel */
+        }
+
+    #gallary .card {
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+        #gallary .card img {
+            border-radius: 10px; /* Bordes redondeados para las imágenes */
+            cursor: pointer; /* Cambio de cursor al pasar el mouse */
+        }

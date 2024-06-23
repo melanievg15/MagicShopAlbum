@@ -1,0 +1,81 @@
+﻿@page
+@model IndexModel
+@{
+}
+
+<style>
+    .small-video {
+        max-width: 100%; /* Ajusta el ancho máximo del video al 100% del contenedor */
+        max-height: 200px; /* Ajusta la altura máxima del video */
+        object-fit: cover; /* Hace que el video cubra el área del contenedor */
+    }
+</style>
+
+<!-- Galería -->
+<div class="container" id="gallary">
+    <!-- Sección sobre la galería -->
+    <div class="about" id="about">
+    </div>
+
+    <!-- Fila de videos con margen superior de 30px -->
+    <div class="row" style="margin-top: 30px;">
+        <!-- Columna que contiene un video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <video autoplay class="small-video">
+                    <source src="~/img/MOTS7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- Columna que contiene otro video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <video autoplay class="small-video">
+                <source src="~/img/1989.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Columna que contiene otro video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <video autoplay class="small-video">
+                <source src="~/img/DDAY.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
+<!-- Bienvenida -->
+<div class="text-center">
+    <h1 class="display-4">¡Bienvenido a Magic Shop Album!</h1>
+    <p class="text-center">"Deja que nuestros álbumes te lleven en un viaje único donde cada canción cuenta su propia historia."</p>
+    <p class="text-center">Melanie Guzmán | Mafer Ávila</p>
+</div>
+
+<!-- Segunda galería -->
+<div class="container" id="gallary">
+    <!-- Sección sobre la galería -->
+    <div class="about" id="about">
+    </div>
+
+    <!-- Fila de videos con margen superior de 30px -->
+    <div class="row" style="margin-top: 30px;">
+        <!-- Columna que contiene un video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <div class="card">
+                <video autoplay class="small-video">
+                    <source src="~/img/Face.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- Columna que contiene otro video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <video autoplay class="small-video">
+                <source src="~/img/Midnights.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Columna que contiene otro video -->
+        <div class="col-md-4 py-3 py-md-0">
+            <video autoplay class="small-video">
+                <source src="~/img/Reputation.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
